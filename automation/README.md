@@ -1,10 +1,10 @@
 Automation Aids
 ===============
 
-Documentation skill
--------------------
-- See `DOCUMENTATION-SKILL.md` for the repository map and task-to-file instructions for SWEs and agents.
-- Use it as the default playbook when creating/updating Analysis, FR, UC, NFR references, entity docs, and gap rows.
+Documentation skills
+--------------------
+- The documentation skills live in `skills/` (moved from here). Start at `skills/document-software-project/SKILL.md` (umbrella) and use the per-phase skills `doc-planning`, `doc-analysis`, `doc-requirements`, `doc-design`, `doc-implementation`, `doc-testing`.
+- Use them as the default playbook across the lifecycle; see `LIFECYCLE.md` for the phase model. (`DOCUMENTATION-SKILL.md` here is now a pointer.)
 
 ID regex (suggested)
 --------------------

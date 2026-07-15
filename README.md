@@ -2,15 +2,21 @@
 
 ## Purpose
 
-This repository is a structured documentation system for software requirements engineering.
+This repository is two things:
 
-It helps teams and agents produce:
+1. A **methodology** for documenting a software project across its full lifecycle - from planning to testing. See `LIFECYCLE.md` for the phase model and `skills/` for the phase skills agents and contributors follow (`document-software-project` orchestrates `doc-planning` -> `doc-testing`).
+2. A **multi-project hub**: it hosts the documentation of many software projects, each self-contained under `projects/<slug>/` and following the same methodology. See `projects/README.md`.
 
+It helps teams and agents produce, per project and per phase:
+
+- Planning/charter records (`PM/`)
+- Requirements analysis records (`Analysis/`)
 - Functional Requirements (FRs)
 - Use Cases (UCs)
 - Non-Functional Requirements (NFRs)
-- Requirements analysis records
 - Entity documentation (Data Dictionary Table + Class Diagram in PlantUML)
+- Diagrams (ERD, sequence, state, architecture)
+- Implementation traceability and test-case registries
 - Gap analysis inputs
 
 ## Primary users
@@ -42,10 +48,15 @@ It helps teams and agents produce:
 Top-level standards and controls:
 - `AGENTS.md` - agent guardrails and canonical vocabulary.
 - `SCHEMA.md` - ID formats, status/priority enums, naming and traceability rules.
+- `LIFECYCLE.md` - the six SDLC phases (planning -> testing), their artifacts and Definition of Done.
 - `QUALITY-GUIDE.md` - quality checklist for FR/UC/entity artifacts.
 - `ANALYSIS-STANDARD.md` - required analysis workflow and output sections.
 - `WORKFLOWS.md` - operational steps for common authoring activities.
 - `PROMPTS.md` - prompt patterns for analysis and artifact drafting.
+
+Multi-project hub:
+- `projects/` - one self-contained doc tree per hosted software project (`projects/<slug>/`). See `projects/README.md`.
+- Root-level `Analysis/`, `FR-Registry/`, `UC-Registry/`, `Data/`, `Package1..3/`, `PM/`, `NFRs.md` currently serve as the reference template alongside `example/`.
 
 ## Core working artifacts:
 
@@ -106,9 +117,18 @@ Top-level standards and controls:
 
 Note: some templates may still include `Implemented`; use the canonical set above unless your project explicitly extends it.
 
-## Documentation skill (repo map + instructions)
+## Documentation skills (per lifecycle phase)
 
-Use `automation/DOCUMENTATION-SKILL.md` as the standard operating skill for documenting this repo with AI agents or human contributors.
+Use the skills in `skills/` as the standard operating procedure for documenting a project here. `skills/document-software-project/SKILL.md` is the umbrella orchestrator; each lifecycle phase has its own decoupled skill that elicits from the SWE and writes only that phase's artifacts:
+
+- `doc-planning` - Phase 0 Planning
+- `doc-analysis` - Phase 1 Analysis
+- `doc-requirements` - Phase 2 Requirements
+- `doc-design` - Phase 3 Design and Modeling
+- `doc-implementation` - Phase 4 Implementation traceability
+- `doc-testing` - Phase 5 Testing
+
+They carry skill frontmatter; copy or symlink `skills/*` into a Claude Code skills root (`~/.claude/skills/`) to auto-activate.
 
 ## It contains:
 
