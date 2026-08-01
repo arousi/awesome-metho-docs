@@ -1,105 +1,43 @@
+# Non-Functional Requirements (NFRs)
 
-
-
-# 3. Non-Functional Requirements (NFRs)
+Project-level NFR catalog. One entry per NFR with an ID and a measurable target.
+Reference these NFR IDs in UC section 9 where a flow depends on them. See
+`SCHEMA.md` and `QUALITY-GUIDE.md`.
 
 ## NFR-1: Availability
 
-*
-*
----
+- <Target, e.g. 99.9% monthly uptime for the core service.>
 
 ## NFR-2: Performance
 
-### NFR-2.1 Authentication Latency
-- .
-
-### NFR-2.2 Concurrency
-- System shall support at least:
-  - X concurrent active sessions (define target)
-  - Y authentication requests per second (define target)
-
-### NFR-2.3 Accounting Throughput
-- 
-
----
+- <Latency target, e.g. p95 request latency under 300 ms.>
+- <Throughput target, e.g. >= X requests/second sustained.>
 
 ## NFR-3: Scalability
 
-- 
-
----
+- <e.g. supports X concurrent users / Y records without redesign.>
 
 ## NFR-4: Security
 
-### NFR-4.1 Credential Security
-- 
-- 
-
-### NFR-4.2 Transport Security
-- 
-- 
-
-### NFR-4.3 Authorization Controls
-- Admin actions shall require role-based access control (RBAC).
-
----
+- <Credential handling, e.g. secrets encrypted at rest and in transit.>
+- <Access control, e.g. admin actions require RBAC.>
 
 ## NFR-5: Reliability
 
-- Lifecycle operations shall be idempotent.
-- Failed provisioning events shall be retried.
-- System shall tolerate duplicate external billing events.
-
----
+- <e.g. state-changing operations are idempotent; failed jobs are retried.>
 
 ## NFR-6: Observability
 
-The system shall provide:
-
-- Structured logging
-- Authentication decision logs
-- Metrics:
-  - Auth success/failure rate
-  - Active sessions
-  - API response times
-- Alerting for:
-  - RADIUS server down
-  - Accounting ingestion failures
-  - API failures
-
----
+- <e.g. structured logs, key metrics (success/failure rate, latency), alerting.>
 
 ## NFR-7: Data Retention
 
-- .
-
----
+- <Retention / erasure target per data class.>
 
 ## NFR-8: Maintainability
 
-- Codebase shall follow modular architecture.
-- Vendor-specific RADIUS logic shall be isolated.
+- <e.g. modular architecture; third-party-specific logic isolated.>
 
----
+## NFR-9: Compliance (if applicable)
 
-## NFR-9: Compliance (If Applicable)
-
-- System shall support lawful intercept data export (if required by jurisdiction).
-- Session logs shall include:
-  - IP address
-  - Timestamp
-  - Subscriber identifier
-
----
-
-# 4. Assumptions
-
-
-
-# 5. Open Questions
-
-
-
-# 6. MVP Scope Recommendation
-
+- <Regulatory / audit requirements, if any.>

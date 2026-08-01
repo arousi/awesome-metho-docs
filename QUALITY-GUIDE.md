@@ -4,7 +4,7 @@ Quality Guide
 Writing principles
 ------------------
 - Be concise; one behavior per FR.
-- Use clear, testable language (“system shall …”).
+- Use clear, testable language ("system shall ...").
 - Prefer specifics (numbers, roles, systems) over vague words.
 
 Acceptance criteria
@@ -15,7 +15,7 @@ Acceptance criteria
 Use Cases
 ---------
 - Actor-centric: list primary and supporting actors.
-- Flows: 3–7 steps main success, alternates for branches/errors.
+- Flows: 3-7 steps main success, alternates for branches/errors.
 - Preconditions and postconditions are explicit.
 
 UX / Screens

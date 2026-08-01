@@ -18,7 +18,7 @@ Create a new FR
 1) Confirm FR candidate and priority from 1-analysis/Analysis.md.
 2) Add row to 2-requirements/FRs.md with ID, module, title, status Draft, priority.
 3) Copy a module FR template to a new file named after the ID.
-4) Fill Description (“system shall…”), Rationale, Acceptance Criteria (≥2), Constraints, Traceability (UC IDs, tests, related FRs).
+4) Fill Description ("system shall..."), Rationale, Acceptance Criteria (>=2), Constraints, Traceability (UC IDs, tests, related FRs).
 5) Ensure related entities are present in modules/<Module>/Entities.md and 4-design/Entities.md.
 6) If gaps exist, add gap matrix row referencing this FR.
 7) Update status when reviewed/approved.
@@ -28,7 +28,7 @@ Create a new UC
 1) Confirm UC candidate and related FRs from 1-analysis/Analysis.md.
 2) Add row to 2-requirements/UCs.md with ID, title, domain, actors, status Draft.
 3) Copy a module UC template to a new file named after the ID.
-4) Fill actors, trigger, preconditions, main flow (3–7 steps), alternates, postconditions, business rules, impacted NFRs, related FRs.
+4) Fill actors, trigger, preconditions, main flow (3-7 steps), alternates, postconditions, business rules, impacted NFRs, related FRs.
 5) Ensure FR files list this UC in their traceability tables.
 6) Ensure entity usage in the flow is reflected in modules/<Module>/Entities.md and 4-design/Entities.md.
 
@@ -42,7 +42,7 @@ Maintain entities
 
 Update traceability
 -------------------
-1) When FR↔UC linkage changes, update both sides.
+1) When FR<->UC linkage changes, update both sides.
 2) Add test case IDs to FR traceability when available.
 3) Add NFR IDs to UC section 9 if relevant.
 

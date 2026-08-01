@@ -48,7 +48,7 @@ Draft a Use Case (UC)
 
 Input: actor(s), trigger, goal, related FRs, preconditions, postconditions, alternates, impacted NFRs.
 
-Output: UC file filled: identification block, brief description, preconditions, trigger, main flow (3–7 steps), alternates, postconditions, business rules, NFR impacts.
+Output: UC file filled: identification block, brief description, preconditions, trigger, main flow (3-7 steps), alternates, postconditions, business rules, NFR impacts.
 
 Draft a screen (UI)
 -------------------
@@ -81,4 +81,4 @@ Traceability check
 ------------------
 Input: FR and UC IDs.
 
-Output: List missing links (FR↔UC↔tests/NFRs), suggest updates to traceability tables.
+Output: List missing links (FR<->UC<->tests/NFRs), suggest updates to traceability tables.

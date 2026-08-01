@@ -1,78 +1,62 @@
-# Project Management Docs
+# Project Charter
 
-## Project Charter
+The Phase 0 planning baseline for this project. Fill each section; keep it to
+scope, stakeholders, and measurable success criteria. See `LIFECYCLE.md` Phase 0.
 
-### About project
+## About
 
-Produce a validated, stakeholder-approved requirements baseline for system replacement.
+<One or two sentences: what this project delivers and for whom.>
 
-### Duration
+## Purpose
 
-4 Weeks.
+<Why this project exists - the outcome it produces and the foundation it sets.>
 
-Deliverables:
+This project does NOT include <explicit out-of-scope statement>.
 
-1. Functional Requirements Registry
-2. Use Case Registry
-3. Gap Analysis Matrix
-4. Risk Register
-5. Stake Holder Register
+## Duration
 
-## 1.2 Project Purpose
+<e.g. 4 weeks> (<start date> - <end date>).
 
-To produce a validated, stakeholder-approved **Requirements Baseline and Gap Analysis** that will serve as the foundation for .
+## Deliverables
 
-This project does NOT include XXXXX.
+1. <Deliverable 1>
+2. <Deliverable 2>
+3. <Deliverable 3>
 
-## 1.3 Objectives (Measurable)
+## Objectives (Measurable)
 
 By project completion:
 
-- 100% of current functional capabilities documented
-- AS-IS architecture mapped
-- All AAA, billing, provisioning, suspension, and automation flows documented
-- Gap analysis completed (Current vs Target stack)
-- Risks identified and categorized
-- Stakeholders sign off on Requirements Baseline
+- <Measurable objective 1>
+- <Measurable objective 2>
+- <Measurable objective 3>
 
-## 1.4 Scope
+## Scope
 
 ### In Scope
 
-1. 
-2. 
-3. 
-4. 
-
+1. <In-scope item>
+2. <In-scope item>
 
 ### Out of Scope
 
-- Implementation
-- Data migration execution
-- Production system changes
-- Vendor contracting
+- <Out-of-scope item>
+- <Out-of-scope item>
 
+## Constraints
 
-## 1.6 Constraints
+- <Constraint, e.g. limited SME availability>
+- <Constraint>
 
-- Difficulty of interviewing all users off the system.
-- Limited SME availability
-- Limited budget
+## Assumptions
 
+- <Assumption>
+- <Assumption>
 
-## 1.7 Assumptions
-
-- Existing systems are operational and accessible
-- Stakeholders will cooperate
-- Database access is available for analysis
-- No major architecture changes during discovery
-
-## 1.8 Success Criteria
+## Success Criteria
 
 The project is successful if:
 
-1. 
-2.
-3 .
-
-
+1. <Criterion>
+2. <Criterion>
+3. <Criterion>

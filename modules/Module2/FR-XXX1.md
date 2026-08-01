@@ -9,7 +9,7 @@
 | Module | (e.g., AD14 - Bulk & Noise Management) |
 | Requirement Code | [FR-XXX-001] Short Name |
 | Title | Short Descriptive Title |
-| Status | Draft / Approved / Deprecated |
+| Status | Draft / In Review / Approved / Deprecated |
 | Priority | Must / Should / Could |
 | Target Release | TBD / v1.0 / v2.1 |
 | Source | Internal Baseline / Derived from XYZ / Regulatory Ref |

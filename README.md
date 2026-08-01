@@ -51,7 +51,7 @@ Phase folders (per project):
 - `2-requirements/` - `FRs.md`, `UCs.md`, `NFRs.md` registries.
 - `3-ux/` - `Screens.md` (UI registry), personas, user flows, design system,
   accessibility, usability tests, wireframes.
-- `4-design/` - `Entities.md`, DDTs, DB schema, `Diagrams/` (ERD/sequence/state/architecture).
+- `4-design/` - `Entities.md`, `Full-DB-Schema.md`, `Diagrams/` (ERD/sequence/state/architecture).
 - `5-implementation/` - `Traceability.md` (FR -> design -> code/PR links).
 - `6-testing/` - `TestCases.md`.
 

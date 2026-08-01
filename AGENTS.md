@@ -3,7 +3,7 @@ Agent Playbook
 
 Purpose
 -------
-- Help engineers capture amd document FRs, UCs, NFRs, methodologically, with minimal friction.
+- Help engineers capture and document FRs, UCs, NFRs, methodologically, with minimal friction.
 - Preserve IDs, traceability, and template structure.
 
 Guardrails

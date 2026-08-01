@@ -46,13 +46,13 @@ Event that initiates the use case.
 ---
 
 ### 6. Alternate Flows / Exceptions
-#### A1 – Alternate Condition Name
+#### A1 - Alternate Condition Name
 - Condition:
 - Flow:
   1.
   2.
 
-#### E1 – Error Condition
+#### E1 - Error Condition
 - Condition:
 - System Response:
 
