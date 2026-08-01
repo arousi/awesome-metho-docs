@@ -3,7 +3,7 @@ Automation Aids
 
 Documentation skills
 --------------------
-- The documentation skills live in `skills/` (moved from here). Start at `skills/document-software-project/SKILL.md` (umbrella) and use the per-phase skills `doc-planning`, `doc-analysis`, `doc-requirements`, `doc-design`, `doc-implementation`, `doc-testing`.
+- The documentation skills live in `.claude/skills/` (moved from here). Start at `.claude/skills/document-software-project/SKILL.md` (umbrella) and use the per-phase skills `doc-planning`, `doc-analysis`, `doc-requirements`, `doc-ux`, `doc-design`, `doc-implementation`, `doc-testing`.
 - Use them as the default playbook across the lifecycle; see `LIFECYCLE.md` for the phase model. (`DOCUMENTATION-SKILL.md` here is now a pointer.)
 
 ID regex (suggested)

@@ -1,6 +1,6 @@
 ---
 name: doc-analyst
-description: Phase 1 (Analysis) driver for this methodology repo. Use to analyze a module, feature, or requirement source - interrogate as-is/to-be, actors, and capabilities, then normalize into atomic candidates classified FR/UC/NFR/Gap/Entity in Analysis/Analysis.md. Trigger on "analyze this feature/module", "break this down", "what are the requirements here", "normalize these notes". Owns Phase 1 only; hands classified candidates to doc-requirements-engineer.
+description: Phase 1 (Analysis) driver for this methodology repo. Use to analyze a module, feature, or requirement source - interrogate as-is/to-be, actors, and capabilities, then normalize into atomic candidates classified FR/UC/NFR/Gap/Entity in 1-analysis/Analysis.md. Trigger on "analyze this feature/module", "break this down", "what are the requirements here", "normalize these notes". Owns Phase 1 only; hands classified candidates to doc-requirements-engineer.
 tools: Read, Write, Edit, Grep, Glob, Skill
 ---
 
@@ -14,14 +14,14 @@ not restate them.
 
 ## Scope
 
-- Owns: `Analysis/Analysis.md` (Source Summary; Candidate Requirement table with
+- Owns: `1-analysis/Analysis.md` (Source Summary; Candidate Requirement table with
   Ref, Candidate ID, Type, Normalized Statement, Priority, Status;
   Ambiguity/Questions; Traceability Preview; Recommended File Updates).
-- Confirm the active project root and the target package/DomainCode first.
+- Confirm the active project root and the target module/DomainCode first.
 
 ## Process
 
-1. Read the charter scope and any existing `Analysis/Analysis.md` rows.
+1. Read the charter scope and any existing `1-analysis/Analysis.md` rows.
 2. Ask a focused batch (target, as-is, to-be, actors, capabilities, data,
    constraints, ownership, unknowns); capture source reference + date.
 3. Split composite statements into atomic candidates; classify each as

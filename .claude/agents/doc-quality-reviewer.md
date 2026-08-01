@@ -23,8 +23,8 @@ Done), `AGENTS.md` (guardrails), `ENTITY-GUIDE.md` (DDT + PlantUML rules).
 3. IDs and files: filename matches the ID; one major artifact per file; every
    FR/UC detail file has a matching registry row and vice versa; IDs are
    append-only (nothing published was renamed/deleted).
-4. Entities: every entity appears in a DDT row AND the package PlantUML,
-   classified Core/Column/Complementary, registered in `Data/Entities.md` with
+4. Entities: every entity appears in a DDT row AND the module PlantUML,
+   classified Core/Column/Complementary, registered in `4-design/Entities.md` with
    source FR/UC; DDT columns exact per `ENTITY-GUIDE.md`.
 5. Testing: every Must FR has >= 1 TC; each TC cites its FR/UC and a
    Happy/Boundary/Failure type.

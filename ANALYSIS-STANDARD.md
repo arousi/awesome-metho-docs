@@ -10,7 +10,7 @@ Scope
 -----
 - Applies to new requirements, change requests, and gap-analysis inputs.
 - Applies to human contributors (SWEs/BAs/PMs) and AI agents.
-- Default working artifact: Analysis/Analysis.md.
+- Default working artifact: 1-analysis/Analysis.md.
 
 Roles
 -----
@@ -21,7 +21,7 @@ Roles
 Required Inputs
 ---------------
 - Source material (notes, ticket, PRD, workshop output, migration findings).
-- Domain/package target.
+- Domain/module target.
 - Known constraints (security, compliance, integration, timeline).
 - Stakeholder list or owner.
 
@@ -29,7 +29,7 @@ Analysis Workflow
 -----------------
 1) Intake and normalize
    - Capture source reference and date.
-   - Create or update an analysis entry in Analysis/Analysis.md.
+   - Create or update an analysis entry in 1-analysis/Analysis.md.
    - Split composite statements into atomic requirements.
    - Mark each candidate as FR, UC detail, NFR impact, gap item, or entity candidate.
 
@@ -41,15 +41,15 @@ Analysis Workflow
 3) Quality shaping
    - FR wording uses testable "system shall" statements.
    - UCs include actors, trigger, preconditions, main flow, alternates, postconditions.
-   - NFR impacts reference IDs from NFRs.md.
+   - NFR impacts reference IDs from 2-requirements/NFRs.md.
    - Acceptance criteria use Given/When/Then with happy, boundary, and failure coverage where relevant.
 
 4) Traceability and coverage
    - Link UC to related FR IDs.
    - Link FR to UC IDs, related FRs, tests, and design components when known.
    - For gaps, include FR/UC IDs in the gap register row.
-   - Link entities to source FR/UC IDs and package mappings in Data/Entities.md.
-   - Keep package-level DDT and PlantUML in Package*/Entities.md synchronized.
+   - Link entities to source FR/UC IDs and module mappings in 4-design/Entities.md.
+   - Keep module-level DDT and PlantUML in modules/<Module>/Entities.md synchronized.
 
 5) Ambiguity resolution
    - Record open questions explicitly.
@@ -60,7 +60,7 @@ Required Analysis Output
 ------------------------
 Provide these sections in every analysis handoff:
 
-- Record the handoff in Analysis/Analysis.md unless a project-specific analysis file is explicitly required.
+- Record the handoff in 1-analysis/Analysis.md unless a project-specific analysis file is explicitly required.
 
 1) Source Summary
    - Input source(s), date, scope, and assumptions.
@@ -84,7 +84,7 @@ Provide these sections in every analysis handoff:
 | FR-...   | UC-..., TC-... | NFR ID, Design Component |
 
 5) Recommended Next Actions
-   - List exact file updates (registries, package files, NFR references, gap rows, entity files).
+   - List exact file updates (registries, module files, NFR references, gap rows, entity files).
 
 Quality Gates (Pass/Fail)
 -------------------------

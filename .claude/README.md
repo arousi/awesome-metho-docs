@@ -9,29 +9,20 @@ project's doc tree here.
 
 | Path | What it is |
 |------|------------|
-| `.claude/skills/` | The 6 phase skills + the `document-software-project` umbrella, auto-discovered project-locally by Claude Code |
+| `.claude/skills/` | The 7 phase skills + the `document-software-project` umbrella, auto-discovered project-locally by Claude Code |
 | `.claude/agents/` | Claude-native subagents (one driver per phase + an orchestrator + a read-only quality reviewer) |
 | `.claude/worktrees/` | Local git worktrees (ignored; not tracked) |
 
-Portable, tool-neutral versions of the agent roster live in `.agents/`, and the
-GitHub Copilot versions in `.github/agents/`. See `.agents/README.md` for the
-cross-tool mapping.
+The GitHub Copilot versions of the agent roster live in `.github/agents/`.
 
 ## Skills
 
-`.claude/skills/` is a copy of the canonical `skills/` at the repo root. The
-root `skills/` stays the source of truth (it is referenced by `README.md`,
-`CLAUDE.md`, and `automation/`); this copy exists only so Claude Code
-auto-activates them project-locally.
+The phase skills live here as `<name>/SKILL.md` and auto-activate
+project-locally when you work in the repo with Claude Code. `README.md`,
+`CLAUDE.md`, and `automation/` reference them at `.claude/skills/`.
 
-Re-sync after editing a skill:
-
-```bash
-cp -r skills/. .claude/skills/
-```
-
-(Or copy/symlink `skills/*` into your global `~/.claude/skills/` instead -- see
-the `document-software-project` skill's "Install" note.)
+(Or copy/symlink `.claude/skills/*` into your global `~/.claude/skills/`
+instead -- see the `document-software-project` skill's "Install" note.)
 
 ## Agents
 
@@ -45,9 +36,10 @@ skill and enforces the repo guardrails.
 | `doc-planner` | 0 Planning | `doc-planning` |
 | `doc-analyst` | 1 Analysis | `doc-analysis` |
 | `doc-requirements-engineer` | 2 Requirements | `doc-requirements` |
-| `doc-modeler` | 3 Design and Modeling | `doc-design` |
-| `doc-traceability-recorder` | 4 Implementation | `doc-implementation` |
-| `doc-test-designer` | 5 Testing | `doc-testing` |
+| `doc-ux-designer` | 3 UX | `doc-ux` |
+| `doc-modeler` | 4 Design and Modeling | `doc-design` |
+| `doc-traceability-recorder` | 5 Implementation | `doc-implementation` |
+| `doc-test-designer` | 6 Testing | `doc-testing` |
 | `doc-quality-reviewer` | Cross-cutting gate | reviews against the standards |
 
 ## Usage
@@ -57,6 +49,6 @@ skill and enforces the repo guardrails.
   agent can hand a scoped phase to the matching subagent.
 - Or start with `doc-orchestrator` when the phase is unclear or you want the
   full lifecycle sequenced end-to-end.
-- All work stays under the active project root (`projects/<slug>/`, or the repo
-  root for the shared template). Get the docs-quality CI gate green before a PR
+- All work stays under the active project root (the repo root is one project
+  template; clone it per project). Get the docs-quality CI gate green before a PR
   to `main` (see `CLAUDE.md`).

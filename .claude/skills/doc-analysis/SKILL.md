@@ -1,6 +1,6 @@
 ---
 name: doc-analysis
-description: Phase 1 (Analysis). Use to analyze a module, feature, or requirement source - ask the SWE questions to understand as-is/to-be, actors, and capabilities, then normalize into atomic candidates classified FR/UC/NFR/Gap/Entity in Analysis/Analysis.md. Trigger on "analyze this feature/module", "break this down", "what are the requirements here", "normalize these notes".
+description: Phase 1 (Analysis). Use to analyze a module, feature, or requirement source - ask the SWE questions to understand as-is/to-be, actors, and capabilities, then normalize into atomic candidates classified FR/UC/NFR/Gap/Entity in 1-analysis/Analysis.md. Trigger on "analyze this feature/module", "break this down", "what are the requirements here", "normalize these notes".
 ---
 
 # Doc: Analysis (Phase 1)
@@ -9,10 +9,10 @@ Normalize incoming requirement input into atomic, classified candidates. Owns Ph
 
 ## Inputs
 - Phase 0 scope + a target module/feature/source (notes, ticket, PRD, existing-system findings).
-- Target package/domain and DomainCode.
+- Target module/domain and DomainCode.
 
 ## Process (elicitation loop)
-1. Read the charter scope and any existing `Analysis/Analysis.md` rows.
+1. Read the charter scope and any existing `1-analysis/Analysis.md` rows.
 2. Ask a focused batch from the bank; capture source reference + date.
 3. Split composite statements into atomic candidates; classify each as FR / UC / NFR / Gap / Entity.
 4. Record ambiguities and a traceability preview; list file-by-file recommended updates.
@@ -27,11 +27,11 @@ Normalize incoming requirement input into atomic, classified candidates. Owns Ph
 - Capabilities: What discrete things must it do? (help split compound asks into atomic ones)
 - Data: What entities / records / fields are involved?
 - Constraints: Security, compliance, performance, integration limits touching this?
-- Ownership: Which package/domain does each candidate belong to? DomainCode?
+- Ownership: Which module/domain does each candidate belong to? DomainCode?
 - Unknowns: What is ambiguous or undecided right now?
 
 ## Outputs (creates / updates)
-- `Analysis/Analysis.md`: Source Summary; Candidate Requirement table (Ref, Candidate ID, Type, Normalized Statement, Priority, Status); Ambiguity/Questions; Traceability Preview; Recommended File Updates.
+- `1-analysis/Analysis.md`: Source Summary; Candidate Requirement table (Ref, Candidate ID, Type, Normalized Statement, Priority, Status); Ambiguity/Questions; Traceability Preview; Recommended File Updates.
 
 ## Definition of Done (gate)
 Every candidate classified; open questions logged; file-by-file update plan listed; no hidden assumptions. (LIFECYCLE.md Phase 1.)

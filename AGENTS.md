@@ -16,7 +16,7 @@ Guardrails
 
 How to work in this repo
 ------------------------
-- Use single files first: create or patch Functional Requirements or Use-Cases in their singular files before including them in their registries and packages.
+- Use single files first: create or patch Functional Requirements or Use-Cases in their singular files before including them in their registries and modules.
 - Match filenames to IDs (FR-XXX.md, UC-XXX.md). Keep one major artifact per file.
 - Link everything: UCs list related FRs; FRs list UCs/tests/design; NFRs referenced in UCs section 9.
 - Gap analysis rows should cite FR/UC IDs when identifying coverage/shortfalls.

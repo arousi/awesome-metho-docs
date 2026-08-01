@@ -12,9 +12,9 @@
 
 - [ ] `FR-*` artifacts updated as needed
 - [ ] `UC-*` artifacts updated as needed
-- [ ] `NFRs.md` or relevant NFR links updated as needed
-- [ ] Registries updated if required (`FR-Registry/`, `UC-Registry/`)
-- [ ] Diagrams/tests/docs updated where applicable
+- [ ] `2-requirements/NFRs.md` or relevant NFR links updated as needed
+- [ ] Registries updated if required (`2-requirements/FRs.md`, `2-requirements/UCs.md`)
+- [ ] Diagrams, tests, or docs updated where applicable
 
 ## Traceability (Required)
 

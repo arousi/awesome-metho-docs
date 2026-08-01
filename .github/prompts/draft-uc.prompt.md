@@ -1,13 +1,13 @@
 ---
 name: Draft UC
 description: "Draft or refine a Use Case (UC) with actors, triggers, basic/alternate flows, and requirement traceability."
-argument-hint: "Target package, UC ID, primary actor, trigger, and related FR/NFR IDs"
+argument-hint: "Target module, UC ID, primary actor, trigger, and related FR/NFR IDs"
 agent: "requirements-engineer"
 ---
 Draft or refine one Use Case artifact in this repository.
 
 Instructions:
-- Work on a single UC file first (for example `PackageX/UC-XXX.md`) before touching registries.
+- Work on a single UC file first (for example `modules/<Module>/UC-XXX.md`) before touching registries.
 - Ensure actors, triggers, preconditions, postconditions, and flows are explicit.
 - Keep wording concise and verifiable.
 - If conflicts or missing details exist, pause and ask clear questions.

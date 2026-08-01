@@ -1,0 +1,36 @@
+// markdownlint config for this documentation-methodology repo.
+// The house style intentionally diverges from markdownlint defaults:
+// setext headings, <Placeholder> ID notation, wide traceability tables,
+// long prose/table lines, and PlantUML code blocks with tabs. The
+// docs-quality CI enforces the ID/status/traceability checks that matter
+// (see .github/workflows/docs-quality.yml); these style rules are noise here.
+{
+  "default": true,
+
+  // wide tables + long prose lines are expected in registries/specs
+  "MD013": false,
+  "MD060": false,
+  "MD058": false,
+
+  // setext headings and lists sit flush with surrounding text in this style
+  "MD022": false,
+  "MD032": false,
+  "MD012": false,
+  "MD003": false,
+  "MD004": false,
+
+  // <Module>, <DomainCode>, <NNN> placeholders read as inline HTML
+  "MD033": false,
+
+  // detail files start with a section (## 1. ...) or setext, not an H1
+  "MD041": false,
+  "MD025": false,
+
+  // ordered lists use the "1)" style; PlantUML blocks use tabs
+  "MD029": false,
+  "MD010": false,
+
+  // pre-existing trailing whitespace / final-newline noise
+  "MD009": false,
+  "MD047": false
+}

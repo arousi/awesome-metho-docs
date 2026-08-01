@@ -8,8 +8,8 @@ body:
     id: scope
     attributes:
       label: Scope
-      description: Package, module, or business process in scope.
-      placeholder: "Example: Package2 onboarding flow"
+      description: Module or business process in scope.
+      placeholder: "Example: Onboarding module flow"
     validations:
       required: true
 

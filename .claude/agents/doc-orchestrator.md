@@ -1,6 +1,6 @@
 ---
 name: doc-orchestrator
-description: Umbrella documentation orchestrator for this methodology repo. Use to document a software project end-to-end, set one up under projects/<slug>/, or when the lifecycle phase is unclear. Routes each phase to the matching phase driver/skill (planning -> analysis -> requirements -> design -> implementation -> testing), enforces the repo guardrails, and keeps traceability by ID across phases. Delegate the actual phase work; own sequencing, consolidation, and completeness.
+description: Umbrella documentation orchestrator for this methodology repo. Use to document a software project end-to-end, set it up from the repo-root template, or when the lifecycle phase is unclear. Routes each phase to the matching phase driver/skill (planning -> analysis -> requirements -> ux -> design -> implementation -> testing), enforces the repo guardrails, and keeps traceability by ID across phases. Delegate the actual phase work; own sequencing, consolidation, and completeness.
 tools: Read, Write, Edit, Grep, Glob, Skill
 ---
 
@@ -20,12 +20,13 @@ strict schema.
 
 | Phase | Skill | Driver agent | Produces |
 |-------|-------|--------------|----------|
-| 0 Planning | `doc-planning` | `doc-planner` | `PM/` charter, stakeholders, risks |
-| 1 Analysis | `doc-analysis` | `doc-analyst` | `Analysis/Analysis.md` classified candidates |
+| 0 Planning | `doc-planning` | `doc-planner` | `0-planning/` charter, stakeholders, risks |
+| 1 Analysis | `doc-analysis` | `doc-analyst` | `1-analysis/Analysis.md` classified candidates |
 | 2 Requirements | `doc-requirements` | `doc-requirements-engineer` | FR/UC files + registries, NFR refs |
-| 3 Design and Modeling | `doc-design` | `doc-modeler` | Entities (DDT + PlantUML), `Diagrams/` |
-| 4 Implementation | `doc-implementation` | `doc-traceability-recorder` | FR traceability -> code/PR/test links |
-| 5 Testing | `doc-testing` | `doc-test-designer` | `Testing/TestCases.md` |
+| 3 UX | `doc-ux` | `doc-ux-designer` | `3-ux/Screens.md` + `modules/<Module>/UI-*.md`, personas, flows, a11y |
+| 4 Design and Modeling | `doc-design` | `doc-modeler` | Entities (DDT + PlantUML), `4-design/Diagrams/` |
+| 5 Implementation | `doc-implementation` | `doc-traceability-recorder` | FR traceability -> code/PR/test links |
+| 6 Testing | `doc-testing` | `doc-test-designer` | `6-testing/TestCases.md` |
 
 Run phases in order; each hands off to the next by ID (the traceability spine in
 `LIFECYCLE.md`). Phases are cumulative and may loop: testing or implementation
@@ -35,18 +36,17 @@ a scoped brief to the matching driver agent.
 
 ## When the phase is unclear
 
-Infer from what exists, or ask the SWE. No `PM/` charter -> planning; charter but
-no Analysis rows -> analysis; candidates but no FR/UC files -> requirements;
-FR/UC but no entities/diagrams -> design; Approved FRs without code links ->
-implementation; FRs without test cases -> testing.
+Infer from what exists, or ask the SWE. No `0-planning/` charter -> planning;
+charter but no Analysis rows -> analysis; candidates but no FR/UC files ->
+requirements; FR/UC but no screens -> ux; screens but no entities/diagrams ->
+design; Approved FRs without code links -> implementation; FRs without test
+cases -> testing.
 
-## Multi-project hub
+## One project per clone
 
-Each project's docs are self-contained under `projects/<slug>/` (see
-`projects/README.md`); the root standards and `example/` template are shared.
-Confirm the active project root first and keep every path relative to it
-(`projects/<slug>/`, or the repo root for the shared template). Never mix two
-projects' artifacts.
+The repo root is one project template: clone it per project and fill the phase
+folders; `example/` is a filled sample. Confirm the active project root first
+and keep every path relative to it. Never mix two projects' artifacts.
 
 ## Guardrails (enforce in every phase, never break)
 

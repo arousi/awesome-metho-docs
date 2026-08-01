@@ -2,14 +2,14 @@
 * @arousi
 
 # Requirements artifacts
-/FR-Registry/** @arousi
-/UC-Registry/** @arousi
-/Package*/FR-*.md @arousi
-/Package*/UC-*.md @arousi
-/NFRs.md @arousi
+/2-requirements/FRs.md @arousi
+/2-requirements/UCs.md @arousi
+/modules/*/FR-*.md @arousi
+/modules/*/UC-*.md @arousi
+/2-requirements/NFRs.md @arousi
 
 # Diagram artifacts
-/Diagrams/** @arousi
+/4-design/Diagrams/** @arousi
 
 # Agent and workflow governance
 /.github/agents/** @arousi

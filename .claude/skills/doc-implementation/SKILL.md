@@ -1,11 +1,11 @@
 ---
 name: doc-implementation
-description: Phase 4 (Implementation traceability). Use to record how approved requirements map to the build - ask the SWE which design components, modules, and code/PRs implement each FR, and link test IDs. Documents traceability only; no code lives here. Trigger on "link requirements to code", "update traceability", "which FRs did this PR implement", "record design components".
+description: Phase 5 (Implementation traceability). Use to record how approved requirements map to the build - ask the SWE which design components, modules, and code/PRs implement each FR, and link test IDs. Documents traceability only; no code lives here. Trigger on "link requirements to code", "update traceability", "which FRs did this PR implement", "record design components".
 ---
 
-# Doc: Implementation Traceability (Phase 4)
+# Doc: Implementation Traceability (Phase 5)
 
-Record the mapping from Approved requirements to the code that builds them. This repo holds documentation, not code - this skill maintains the traceability links only. Owns Phase 4 only (`SCHEMA.md` traceability rules). Consumes `doc-design` / `doc-requirements`; feeds `doc-testing`.
+Record the mapping from Approved requirements to the code that builds them. This repo holds documentation, not code - this skill maintains the traceability links only. Owns Phase 5 only (`SCHEMA.md` traceability rules). Consumes `doc-design` / `doc-requirements`; feeds `doc-testing`.
 
 ## Inputs
 - Approved FR/UC IDs + their design components/entities.
@@ -26,13 +26,14 @@ Record the mapping from Approved requirements to the code that builds them. This
 - Status: Has this been reviewed/approved? (status stays a review-state; there is no Implemented status)
 
 ## Outputs (updates)
-- Traceability section of each `Packages/<Package>/FR-*.md`: Design Components, code/PR/commit refs, Related FRs, Test Cases.
+- `5-implementation/Traceability.md`: the traceability overview (Approved FR/UC -> design -> code/PR links).
+- Traceability section of each `modules/<Module>/FR-*.md`: Design Components, code/PR/commit refs, Related FRs, Test Cases.
 
 ## Definition of Done (gate)
-Each Approved FR/UC links its design components and, where known, the implementing code/PR and test IDs. (LIFECYCLE.md Phase 4.)
+Each Approved FR/UC links its design components and, where known, the implementing code/PR and test IDs. (LIFECYCLE.md Phase 5.)
 
 ## Handoff
 FRs carrying design + code + test references -> `doc-testing` verifies coverage.
 
 ## Guardrails
-Never add an "Implemented" status (CI rejects it) - track build via links. Deviations become new IDs, never silent rewrites. ASCII; append-only. See `SCHEMA.md`, `LIFECYCLE.md` Phase 4.
+Never add an "Implemented" status (CI rejects it) - track build via links. Deviations become new IDs, never silent rewrites. ASCII; append-only. See `SCHEMA.md`, `LIFECYCLE.md` Phase 5.

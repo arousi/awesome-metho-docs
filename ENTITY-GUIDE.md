@@ -10,14 +10,14 @@ Mandatory Rules
 ---------------
 - Every documented attribute/column must appear in a DDT row.
 - Every entity set must have a PlantUML diagram that reflects the same entities.
-- Each package must classify entities as Core, Column, or Complementary.
-- The project-wide entity registry in Data/Entities.md must map each entity to at least one package.
+- Each module must classify entities as Core, Column, or Complementary.
+- The project-wide entity registry in 4-design/Entities.md must map each entity to at least one module.
 
 Classification Vocabulary
 -------------------------
-- Core: central to package behavior and use cases.
+- Core: central to module behavior and use cases.
 - Column: data columns/attributes that are required to operate or query a core entity.
-- Complementary: supporting or enrichment entities that are not primary drivers of package behavior.
+- Complementary: supporting or enrichment entities that are not primary drivers of module behavior.
 
 DDT Standard Columns (Attribute-Level)
 --------------------------------------
@@ -26,11 +26,11 @@ Use this exact column order in DDT tables:
 | Entity Name | Attribute/Column Name | Key (PK/FK/-) | Data Type | Not Null (Y/N) | Length | FK Table | Description |
 |-------------|------------------------|---------------|-----------|----------------|--------|----------|-------------|
 
-Entity Classification Table (Per Package)
+Entity Classification Table (Per Module)
 -----------------------------------------
-Use a separate table for package role classification:
+Use a separate table for module role classification:
 
-| Entity ID | Entity Name | Package | Package Role (Core/Column/Complementary) | Source FR/UC | Owner | Status |
+| Entity ID | Entity Name | Module | Module Role (Core/Column/Complementary) | Source FR/UC | Owner | Status |
 |-----------|-------------|---------|-------------------------------------------|--------------|-------|--------|
 
 Status and Priority
@@ -41,10 +41,10 @@ Status and Priority
 PlantUML Requirements
 ---------------------
 - Keep entity names and relationships aligned with DDT rows.
-- Prefer one diagram per package in PackageX/Entities.md.
-- Keep an optional aggregate view in Data/Entities.md when needed.
+- Prefer one diagram per module in modules/<Module>/Entities.md.
+- Keep an optional aggregate view in 4-design/Entities.md when needed.
 
-Template Snippet (Per Package)
+Template Snippet (Per Module)
 ------------------------------
 1) Entity Classification table.
 2) DDT (attribute/column) table.
@@ -55,6 +55,6 @@ Quality Checklist
 -----------------
 - DDT rows include Key, Data Type, Not Null, Length, FK Table, and Description.
 - DDT and PlantUML contain the same entities.
-- Each entity has package role classification (Core/Column/Complementary).
+- Each entity has module role classification (Core/Column/Complementary).
 - Source FR/UC references are present where known.
-- Entity is registered in Data/Entities.md with package mapping.
+- Entity is registered in 4-design/Entities.md with module mapping.
