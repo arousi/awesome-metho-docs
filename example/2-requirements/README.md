@@ -1,7 +1,7 @@
 # Requirements (Phase 2)
 
-This folder is the requirements registry for the example project. It replaces the
-separate FR and UC registry folders from the old layout.
+This folder is the Phase 2 requirements registry for the example project. One row
+per artifact here; the detail files live under `../modules/<Module>/`.
 
 - `FRs.md` - Functional Requirements registry (one row per FR); detail in `../modules/<Module>/FR-*.md`.
 - `UCs.md` - Use Case registry (one row per UC); detail in `../modules/<Module>/UC-*.md`.

@@ -1,4 +1,9 @@
+ERD (Crow's Foot)
+=================
 
-ERD is part of CROW's not UML
+Entity-Relationship Diagrams use Crow's Foot notation, not UML. They illustrate
+relationships between pairs of entities rather than the complete schema.
 
-This README provides guidance on using Entity-Relationship Diagrams (ERDs) with Crow's Foot notation, emphasizing their purpose for illustrating relationships between pairs of entities rather than representing the complete schema. For comprehensive schema documentation, refer to the /Data directory.
+For the attribute-level schema (the DDT), see `../../Entities.md` (the entity
+registry) and each module's `../../../modules/<Module>/Entities.md`; the full DB
+schema lives in `../../Full-DB-Schema.md`.

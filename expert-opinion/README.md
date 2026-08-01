@@ -1,6 +1,9 @@
 # Expert Opinion Outputs
 
-Use this folder for consultant-style answers produced by ISO/BPMN custom agents.
+Use this folder for consultant-style answers produced by the expert-advisor
+agents in `.github/agents/` - the ISO records/QMS/security/governance/continuity
+experts and the BPMN process-architecture expert. The per-consultant filenames
+below map 1:1 to those `*.agent.md` files.
 
 ## Path Convention
 
