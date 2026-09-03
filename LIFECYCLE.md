@@ -66,6 +66,12 @@ Phase 6 - Testing
 - Location: `6-testing/TestCases.md` (rows keyed `TC-<Area>-NNN`, each citing the FR/UC/UI IDs it verifies). The Given/When/Then acceptance criteria inside each FR are the test basis.
 - Owning standards: `QUALITY-GUIDE.md`, `SCHEMA.md`.
 - DoD: every Must FR has >= 1 TC; each TC cites its FR/UC (and screen where a UI test); happy, boundary, and failure paths covered; TC IDs back-referenced in the FR Traceability section.
+- Scope note: IEEE 829 names 8 distinct test-documentation artifact types (test plan, test design
+  spec, test case spec, test procedure spec, test item transmittal report, test log, test incident
+  report, test summary report). `TestCases.md` deliberately covers only the case-spec-equivalent
+  concern (test cases linked to FR/UC IDs) -- this is a deliberate scope choice for this lightweight
+  doc methodology, not an oversight; the other 7 concerns are left to the project's own CI/test-run
+  tooling.
 
 Traceability spine (all phases)
 -------------------------------
