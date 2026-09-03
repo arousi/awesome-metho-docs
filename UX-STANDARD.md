@@ -36,10 +36,56 @@ Screen specification (required fields)
 - UI ID, Title, Module, Purpose.
 - Realizes: the Related FRs / UCs this screen implements.
 - States: empty / loading / error / success / permission-denied (as applicable).
-- Key components (from the design system) and primary actions.
+  Loading is not "just a spinner": if the underlying work has known steps or
+  duration, show real progress (percentage, step count, ETA) — a bare
+  indeterminate spinner fails the Gulf of Evaluation (user can't tell how much
+  progress has actually been made). Error/success must give closure (rule 4
+  below) with a clear, specific recovery path (rule 5).
+- Key components (from the design system) and primary actions. Classify each
+  component using the 4-category taxonomy: input controls (checkbox, radio,
+  dropdown, button, toggle, text/date field), navigational (breadcrumb,
+  pagination, tabs, search field), informational (tooltip, progress bar,
+  notification, modal), containers (accordion, card group, panel). Containers
+  nest **at most one level deep** — a container inside a container inside a
+  container is a smell, flag it in review.
 - Data shown / captured (fields, validation) and the API/entity it binds to.
-- Accessibility notes (keyboard, focus order, contrast, labels).
+  Any long identifier (VIN, tracking number, order/invoice number) is
+  displayed **chunked** (e.g. `1HG-CM82-6-3A004352`, not one unbroken run) —
+  long unbroken strings are hard to recall/transcribe (Miller chunking); see
+  `form-input-rules` for the input-side convention.
+- Accessibility notes (keyboard, focus order, contrast, labels). Icon-only
+  buttons/controls are a **signifier gap**, not a generic a11y note: the icon
+  has the affordance (it looks clickable) but nothing signals what it *does*
+  unless paired with a label/tooltip or a well-established icon convention
+  (trash = delete). Call this out explicitly, don't fold it into "labels".
 - Mockup link (a `Wireframes/` image or a Figma URL).
+- External-consistency note: if this screen introduces an interaction pattern
+  with an established convention elsewhere (Jakob's Law — cart icon, checkout
+  steps, notification bell placement) or diverges from export119's own
+  existing convention for the same pattern, the spec states the justification
+  for the deviation. A breaking redesign of an already-Approved screen is
+  called out here for a staged/feature-flagged rollout, not a silent swap.
+
+Screen-review heuristic checklist
+----------------------------------
+Before a screen spec can move to Approved, check it against Shneiderman's
+Eight Golden Rules by name:
+1. Consistency (internal + external/Jakob's Law).
+2. Shortcuts for frequent users (keyboard accelerators, saved filters).
+3. Informative feedback on every action with consequences.
+4. Dialogs yield closure (a visible end-of-interaction, e.g. a confirmation).
+5. Simple, specific error handling with a recovery path.
+6. Easy reversal of actions (undo, visible cancel, action history).
+7. Internal locus of control (user feels in charge; no non-essential element
+   steals focus from the primary action).
+8. Reduced short-term memory load (recognition over recall; nothing carried
+   between screens/steps that the UI could just keep visible).
+
+Plus two items from Sommerville's GUI principles not already covered above:
+- Minimal surprise: a command should behave the way a comparable command
+  elsewhere in export119 already behaves.
+- User diversity: the interface adapts to different user needs (e.g. larger
+  text for low-vision users) as a design requirement, not an afterthought.
 
 Registry rules
 --------------
@@ -64,3 +110,6 @@ Definition of Done (Phase 3)
 - Each screen: registry row + spec file + states + related FR/UC + mockup link.
 - Personas, the primary user flows, and the a11y target are recorded.
 - Each wireframe/flow reviewed for correctness (LLM-drafted flows are asserted, not trusted).
+- Every Must-priority screen passes through at least one prototype -> evaluate
+  -> refine touchpoint (recorded in `UsabilityTests.md`) before status moves
+  to Approved.
