@@ -37,7 +37,7 @@ Screen specification (required fields)
 - Realizes: the Related FRs / UCs this screen implements.
 - States: empty / loading / error / success / permission-denied (as applicable).
   Loading is not "just a spinner": if the underlying work has known steps or
-  duration, show real progress (percentage, step count, ETA) — a bare
+  duration, show real progress (percentage, step count, ETA) -- a bare
   indeterminate spinner fails the Gulf of Evaluation (user can't tell how much
   progress has actually been made). Error/success must give closure (rule 4
   below) with a clear, specific recovery path (rule 5).
@@ -46,11 +46,11 @@ Screen specification (required fields)
   dropdown, button, toggle, text/date field), navigational (breadcrumb,
   pagination, tabs, search field), informational (tooltip, progress bar,
   notification, modal), containers (accordion, card group, panel). Containers
-  nest **at most one level deep** — a container inside a container inside a
+  nest **at most one level deep** -- a container inside a container inside a
   container is a smell, flag it in review.
 - Data shown / captured (fields, validation) and the API/entity it binds to.
   Any long identifier (VIN, tracking number, order/invoice number) is
-  displayed **chunked** (e.g. `1HG-CM82-6-3A004352`, not one unbroken run) —
+  displayed **chunked** (e.g. `1HG-CM82-6-3A004352`, not one unbroken run) -- 
   long unbroken strings are hard to recall/transcribe (Miller chunking); see
   `form-input-rules` for the input-side convention.
 - Accessibility notes (keyboard, focus order, contrast, labels). Icon-only
@@ -60,7 +60,7 @@ Screen specification (required fields)
   (trash = delete). Call this out explicitly, don't fold it into "labels".
 - Mockup link (a `Wireframes/` image or a Figma URL).
 - External-consistency note: if this screen introduces an interaction pattern
-  with an established convention elsewhere (Jakob's Law — cart icon, checkout
+  with an established convention elsewhere (Jakob's Law -- cart icon, checkout
   steps, notification bell placement) or diverges from export119's own
   existing convention for the same pattern, the spec states the justification
   for the deviation. A breaking redesign of an already-Approved screen is
