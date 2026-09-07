@@ -48,9 +48,10 @@ Phase 3 - UX
 Phase 4 - Design and Modeling
 -----------------------------
 - Produces: entity/data model (DDT + PlantUML) and behavioral/structural diagrams.
-- Location: `modules/<Module>/Entities.md` (classification + attribute-level DDT + PlantUML) + `4-design/Entities.md` (cross-module registry); `4-design/Diagrams/` (ERD, sequence, state, architecture).
+- Location: `modules/<Module>/Entities.md` (classification + attribute-level DDT + PlantUML) + `4-design/Entities.md` (cross-module registry); `4-design/Diagrams/` (ERD, sequence, state, architecture), one diagram per `.puml` file - PlantUML is never inlined in a `.md`; a `.md` carries an ASCII diagram plus a pointer to its `.puml` source (see `4-design/Diagrams/README.md`).
 - Owning standards: `ENTITY-GUIDE.md`, `4-design/Diagrams/README.md`.
 - DoD: every entity appears in a DDT row AND the module PlantUML, classified Core/Column/Complementary, registered in `4-design/Entities.md` with source FR/UC; each diagram reviewed for correctness (LLM-drafted diagrams must be asserted, not trusted).
+- DoD, added 2026-09-07: **every diagram has been RENDERED, not merely written** - `bash 4-design/Diagrams/render-check.sh` exits 0. A diagram nobody has rendered is a guess about syntax as well as content, and an inline PlantUML block in a `.md` does not get rendered as part of authoring it. The script also fails if any `.md` still carries an inline `@startuml`.
 
 Phase 5 - Implementation (traceability)
 ---------------------------------------
